@@ -4,7 +4,9 @@ This plugin integrates the Sumup SDK into Ionic apps. It works with both Android
 
 ## Installation
 Install using the ionic CLI
+```
 ionic cordova plugin add cordova-plugin-sumupova
+```
 
 ## Usage
 Initialize the plugin with your Sumup merchant key
