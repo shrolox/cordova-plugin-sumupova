@@ -25,3 +25,7 @@ Sumupova.pay([PAYMENT_AMOUNT_AS_STRING], [COMPANY_NAME], [CURRENCY_NAME], functi
   // ERROR DURING PAYMENT
 });
 ```
+Display Sumup settings page
+```
+Sumupova.presentPreferences()
+```
