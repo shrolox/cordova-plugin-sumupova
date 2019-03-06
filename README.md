@@ -8,14 +8,20 @@ ionic cordova plugin add cordova-plugin-sumupova
 
 ## Usage
 Initialize the plugin with your Sumup merchant key
-` Sumupova.init([YOUR_KEY]) `
+```
+Sumupova.init([YOUR_KEY])
+```
 
 Display the login page for the cashier
-`Sumupova.login()`
+```
+Sumupova.login()
+```
 
 Initialize the payment
-`Sumupova.pay([PAYMENT_AMOUNT_AS_STRING], [COMPANY_NAME], [CURRENCY_NAME], function () {
+```
+Sumupova.pay([PAYMENT_AMOUNT_AS_STRING], [COMPANY_NAME], [CURRENCY_NAME], function () {
   // PAYMENT SUCCESS
 }, function (error) {
   // ERROR DURING PAYMENT
-});`
+});
+```
