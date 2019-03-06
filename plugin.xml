@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-sumupova" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>Sumupova</name>
+	<js-module name="Sumupova" src="www/Sumupova.js">
+		<clobbers target="Sumupova" />
+	</js-module>
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="Sumupova">
+				<param name="ios-package" value="Sumupova" />
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/Sumupova-Bridging-Header.h"/>
+		<source-file src="src/ios/Sumupova.swift" />
+
+		<framework src="Accelerate.framework" weak="true" />
+		<framework src="AVFoundation.framework" weak="true" />
+		<framework src="MapKit.framework" weak="true" />
+		<resource-file src="src/ios/frameworks/SumupSDK.embeddedframework/Resources/SMPSharedResources.bundle" />
+		<framework src="src/ios/frameworks/SumupSDK.embeddedframework/SumupSDK.framework" custom="true" />
+
+  	 	<framework src="libsqlite3.dylib" />
+	</platform>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="Sumupova">
+				<param name="android-package" value="cordovapluginsumupova.Sumupova" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml">
+		</config-file>
+		<source-file src="src/android/Sumupova.java" target-dir="src/cordova-plugin-sumupova/Sumupova" />
+		<framework src="src/android/sumup.gradle" custom="true" type="gradleReference" />
+		<resource-file src="src/android/res/values/values.xml" target="res/values/values.xml" />
+    	<resource-file src="src/android/res/values-es-rCL/values-es-rCL.xml" target="res/values-es-rCL/values-es-rCL.xml" />
+    	<resource-file src="src/android/res/values-pt-rBR/values-pt-rBR.xml" target="res/values-pt-rBR/values-pt-rBR.xml" />
+    	<resource-file src="src/android/res/values-sk/values-sk.xml" target="res/values-sk/values-sk.xml" />
+    	<resource-file src="src/android/res/values-sl/values-sl.xml" target="res/values-sl/values-sl.xml" />
+	</platform>
+	<platform name="browser">
+	    <config-file target="config.xml" parent="/*">
+	        <feature name="Sumupova">
+	            <param name="browser-package" value="Sumupova" />
+	        </feature>
+	    </config-file>
+
+	    <js-module src="src/browser/Sumupova.js" name="Sumupova">
+	        <runs />
+	    </js-module>
+	</platform>
+
+
+	<dependency id="cordova-plugin-add-swift-support"/>
+</plugin>
