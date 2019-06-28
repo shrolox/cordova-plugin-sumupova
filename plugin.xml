@@ -17,8 +17,8 @@
 		<framework src="Accelerate.framework" weak="true" />
 		<framework src="AVFoundation.framework" weak="true" />
 		<framework src="MapKit.framework" weak="true" />
-		<resource-file src="src/ios/frameworks/SumupSDK.embeddedframework/Resources/SMPSharedResources.bundle" />
-		<framework src="src/ios/frameworks/SumupSDK.embeddedframework/SumupSDK.framework" custom="true" />
+		<resource-file src="src/ios/frameworks/SumupSDK.embeddedframework/Resources/SMPSharedResources.bundle" embed="true"/>
+		<framework src="src/ios/frameworks/SumupSDK.embeddedframework/SumupSDK.framework" custom="true" embed="true"/>
 
   	 	<framework src="libsqlite3.dylib" />
 	</platform>
