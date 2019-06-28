@@ -1,5 +1,29 @@
 {
   "name": "cordova-plugin-sumupova",
   "version": "0.1.0",
-  "description": "Sumup plugin for ionic"
+  "description": "Sumup plugin for ionic",
+  "cordova": {
+    "id": "cordova-plugin-sumupova",
+    "platforms": [
+      "ios",
+      "android",
+      "browser"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrolox/cordova-plugin-sumupova.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-browser"
+  ],
+  "author": "Shrolox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrolox/cordova-plugin-sumupova/issues"
+  },
+  "homepage": "https://github.com/shrolox/cordova-plugin-sumupova#readme"
 }

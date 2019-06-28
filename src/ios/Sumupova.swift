@@ -1,4 +1,5 @@
 @objc(Sumupova) class Sumupova : CDVPlugin {
+    @objc(initPlugin:)
     func initPlugin(_ command: CDVInvokedUrlCommand) {
         let key : String? = command.arguments[0] as? String
         
@@ -7,14 +8,17 @@
         }
     }
 
+    @objc(login:)
     func login(_ command: CDVInvokedUrlCommand) {
         SumUpSDK.presentLogin(from: self.viewController, animated: true, completionBlock: nil);
     }
 
+    @objc(presentPreferences:)
     func presentPreferences(_ command: CDVInvokedUrlCommand) {
         SumUpSDK.presentCheckoutPreferences(from: self.viewController, animated: true, completion: nil)
     }
     
+    @objc(paySumup:)
     func paySumup(_ command: CDVInvokedUrlCommand) {
         let price : String? = (command.arguments[0] as? String)
         let title : String? = (command.arguments[1] as? String)
